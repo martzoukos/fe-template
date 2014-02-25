@@ -24,6 +24,12 @@
 #   page "/admin/*"
 # end
 
+require "kss"
+page "/styleguide/objects.html" do
+  @styleguide = Kss::Parser.new('source/assets/stylesheets/objects/')
+end
+
+
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
@@ -45,11 +51,11 @@
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'assets/stylesheets'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'assets/javascripts'
 
-set :images_dir, 'images'
+set :images_dir, 'assets/images'
 
 # Build-specific configuration
 configure :build do

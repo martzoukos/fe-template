@@ -10,10 +10,10 @@
   %head
 
     = stylesheet_link_tag "application"
-    = javascript_include_tag "javascripts/bower_components/modernizr/modernizr"
+    = javascript_include_tag "/assets/javascripts/bower_components/modernizr/modernizr"
 
   %body
     
     = yield
     
-    %script{ :src => "javascripts/libs/require.js", :data => { :main => "javascripts/application.js" }}
+    %script{ :src => "/assets/javascripts/libs/require.js", :data => { :main => "/assets/javascripts/application.js" }}

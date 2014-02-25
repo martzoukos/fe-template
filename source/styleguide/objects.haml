@@ -1,0 +1,18 @@
+%h1= "Styleguide"
+
+- @styleguide.sections.each_pair do |id, section|
+  
+  %h3= "ID:"
+  = id
+
+  %h3= "Section:"
+  %ul
+    %li= section.filename
+    %li= section.description
+    %li
+      Modifiers:
+      %ol
+        - section.modifiers.each do |modifier|
+          %li= modifier.class_name
+          %li= modifier.name
+          %li= modifier.description
